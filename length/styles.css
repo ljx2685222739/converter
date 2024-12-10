@@ -1,0 +1,324 @@
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #4CAF50;
+    --background-color: #f5f5f5;
+    --border-color: #ddd;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    margin-bottom: 0.5rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo-text .highlight {
+    color: #90EE90; /* 亮荧光绿色 */
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.converter-tool {
+    background: #f5f5f5;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 4px;
+}
+
+.result {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.result span {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.converter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.input-group {
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.unit-list {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
+
+.unit-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.unit-item:hover {
+    background-color: #f0f0f0;
+}
+
+.unit-item.selected {
+    background-color: #e0e0e0;
+}
+
+/* 滚动条样式 */
+.unit-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.unit-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.unit-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.unit-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.tools-navigation {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.converter-categories {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.converter-categories ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid #ccc;
+    width: 400px; /* 固定宽度 */
+    margin: 0 auto;
+}
+
+.converter-categories li {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.converter-categories a {
+    text-decoration: underline;
+    color: #333;
+    display: block;
+}
+
+.converter-categories a:hover {
+    text-decoration: none;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .converter-categories ul {
+        width: 90%; /* 移动端使用百分比宽度 */
+    }
+}
+.converter-categories a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.seo-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+}
+
+/* 主标题样式 */
+.seo-content h2 {
+    color: #2E7D32;
+    padding: 1.5rem 0 1rem;
+    margin-top: 2.5rem;
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* 第一个 h2 不需要顶部边距 */
+.seo-content h2:first-child {
+    margin-top: 0;
+}
+
+/* 子标题样式 */
+.seo-content h3 {
+    color: #333;
+    margin: 1.5rem 0 1rem;
+}
+
+.seo-content h4 {
+    color: #555;
+    margin: 1.2rem 0 0.8rem;
+}
+
+/* 内容块样式 */
+.seo-content p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* 列表样式 */
+.seo-content ul,
+.seo-content ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.seo-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* 内容模块样式 */
+.seo-content section {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .seo-content {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .seo-content h2 {
+        padding: 1rem 0 0.8rem;
+        margin-top: 2rem;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+.result-display {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.result-display span:first-child {
+    color: #dc3545;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.unit-select {
+    width: 250px !important;
+    height: 200px !important;
+}
+
+.input-group select {
+    width: 250px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.input-group input {
+    width: 200px;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* 添加媒体查询，在小屏幕上改为单列布局 */
+@media screen and (max-width: 768px) {
+    .converter-container {
+        grid-template-columns: 1fr; /* 改为单列 */
+        gap: 1rem;
+    }
+
+    .converter-tool {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .input-group {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .unit-list {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* 确保所有元素都使用 border-box */
+* {
+    box-sizing: border-box;
+}

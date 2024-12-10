@@ -25,10 +25,28 @@ body {
     padding: 0 20px;
 }
 
-.header {
+header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    margin-bottom: 0.5rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo-text .highlight {
+    color: #90EE90; /* 亮荧光绿色 */
 }
 
 .breadcrumb {
