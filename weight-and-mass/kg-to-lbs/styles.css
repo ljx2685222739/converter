@@ -1,0 +1,494 @@
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #4CAF50;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --text-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+}
+
+.breadcrumb {
+    background-color: #fff;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumb li:not(:last-child):after {
+    content: "›";
+    margin-left: 0.5rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main {
+    padding: 2rem 0;
+}
+
+/* 主要内容区布局 */
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.content-area {
+    min-width: 0;
+}
+
+.converter-card {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.converter-form {
+    margin-top: 2rem;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 6px;
+    position: relative;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    max-width: 500px;
+}
+
+.input-group label {
+    width: 80px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.input-group input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: 45px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    max-width: 300px;
+}
+
+.unit {
+    position: absolute;
+    right: calc(100% - 300px - 60px);
+    color: #666;
+    font-weight: 500;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn-convert {
+    background-color: #2c5530;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn-clear {
+    background-color: #808080;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* 右侧边栏样式 */
+.sidebar {
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar-section {
+    padding: 1.5rem;
+}
+
+.sidebar-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.converter-group {
+    margin-bottom: 1.5rem;
+}
+
+.converter-group h4 {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.converter-group ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.converter-group li {
+    margin-bottom: 0.5rem;
+}
+
+.converter-group a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.converter-group a:hover {
+    color: var(--primary-color);
+}
+
+/* 结果显示样式 */
+.result {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.result.show {
+    font-weight: 600;
+}
+
+/* 结果文字样式 */
+.result::before {
+    content: "Result: ";
+    color: #e41e31;
+    font-weight: 600;
+}
+
+/* SEO内容区域 */
+.seo-content {
+    margin-top: 3rem;
+}
+
+.seo-content article {
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.seo-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.seo-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.seo-content h4 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.seo-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.seo-content ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.seo-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.conversion-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.conversion-table th,
+.conversion-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.conversion-table th {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.conversion-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.conversion-table tr:hover {
+    background: #f1f3f5;
+}
+
+.formula-block {
+    background: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.feature-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+/* 响应式布局 */
+@media (max-width: 992px) {
+    .main-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+        padding-right: 80px;
+    }
+    
+    .input-group label {
+        margin-bottom: 0.5rem;
+    }
+    
+    .input-group input {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .unit {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        padding-left: 10px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* 转换器标题和描述 */
+.converter-card h2 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.converter-card .description {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.switch-link {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.switch-link:hover {
+    transform: scale(1.1);
+    background: #f0f0f0;
+}
+
+.switch-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* 添加转换表格样式 */
+.conversion-table {
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.conversion-table h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.conversion-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.conversion-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.conversion-table td {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.conversion-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.conversion-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* 确保表格在小屏幕上也能正常显示 */
+@media (max-width: 768px) {
+    .conversion-table {
+        overflow-x: auto;
+    }
+    
+    .conversion-table table {
+        min-width: 300px;
+    }
+}
+
+/* 为sidebar-section中的链接添加悬停效果 */
+.sidebar-section a {
+    text-decoration: none; /* 默认状态下没有下划线 */
+    color: var(--text-color); /* 使用变量控制文字颜色 */
+    transition: all 0.2s ease; /* 添加平滑过渡效果 */
+}
+
+.sidebar-section a:hover {
+    text-decoration: underline; /* 悬停时显示下划线 */
+    color: var(--primary-color); /* 悬停时可以改变文字颜色 */
+}
+
+/* 添加提示信息样式 */
+.converter-tips {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.converter-tips p {
+    margin: 0;
+    line-height: 1.4;
+}
